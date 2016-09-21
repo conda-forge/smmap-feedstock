@@ -1,20 +1,22 @@
+{% set version = "0.9.0" %}
+
 package:
   name: smmap
-  version: "0.9.0"
+  version: {{ version }}
 
 source:
-  fn: smmap-0.9.0.tar.gz
-  url: https://pypi.python.org/packages/source/s/smmap/smmap-0.9.0.tar.gz
-  sha256: 0e2b62b497bd5f0afebc002eda4d90df9d209c30ef257e8673c90a6b5c119d62
+  fn: smmap-{{ version }}.tar.gz
+  url: https://github.com/gitpython-developers/smmap/archive/v{{ version }}.tar.gz
+  sha256: 2b0051557554241fc4ef8b127a6cc21b28f379663db37f1de1abb7c6efcaa498
 
 build:
   number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
     - python
     - setuptools
-
   run:
     - python
 
@@ -24,10 +26,11 @@ test:
     - smmap.test
 
 about:
-  home: https://github.com/Byron/smmap
-  license: BSD License
-  summary: 'A pure git implementation of a sliding window memory map manager'
+  home: https://github.com/gitpython-developers/smmap
+  license: BSD 3-Clause
+  summary: 'A pure git implementation of a sliding window memory map manager.'
 
 extra:
     recipe-maintainers:
         - pelson
+        - ocefpaf
