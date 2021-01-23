@@ -5,11 +5,9 @@ Home: https://github.com/gitpython-developers/smmap
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/smmap-feedstock/blob/master/LICENSE.txt)
 
 Summary: A pure git implementation of a sliding window memory map manager.
-
-
 
 Current build status
 ====================
