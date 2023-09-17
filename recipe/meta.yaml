@@ -1,4 +1,4 @@
-{% set version = "5.0.0" %}
+{% set version = "6.0.0" %}
 
 package:
   name: smmap
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/smmap/smmap-{{ version }}.tar.gz
-  sha256: c840e62059cd3be204b0c9c9f74be2c09d5648eddd4580d9314c3ecde0b30936
+  sha256: 8d79028ea6cc131da5eab099a5d95a998d43c6779956fffe3b455040911076da
 
 build:
   number: 0
