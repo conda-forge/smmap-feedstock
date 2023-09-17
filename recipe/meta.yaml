@@ -1,24 +1,25 @@
+{% set name = "smmap" %}
 {% set version = "6.0.0" %}
 
 package:
-  name: smmap
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/smmap/smmap-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/smmap-{{ version }}.tar.gz
   sha256: 8d79028ea6cc131da5eab099a5d95a998d43c6779956fffe3b455040911076da
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.8
     - pip
   run:
-    - python >=3.5
+    - python >=3.8
 
 test:
   requires:
@@ -30,9 +31,10 @@ test:
 
 about:
   home: https://github.com/gitpython-developers/smmap
+  summary: A pure git implementation of a sliding window memory map manager.
+  doc_url: https://pythonhosted.org/smmap/
   license: BSD-3-Clause
   license_file: LICENSE
-  summary: A pure git implementation of a sliding window memory map manager.
 
 extra:
   recipe-maintainers:

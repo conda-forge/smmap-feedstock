@@ -9,6 +9,8 @@ Package license: BSD-3-Clause
 
 Summary: A pure git implementation of a sliding window memory map manager.
 
+Documentation: https://pythonhosted.org/smmap/
+
 Current build status
 ====================
 
