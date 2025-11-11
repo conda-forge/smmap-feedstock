@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
-  number: 2
+  number: 3
 
 requirements:
   host:
@@ -33,6 +33,7 @@ test:
 
 about:
   home: https://github.com/gitpython-developers/smmap
+  dev_url: https://github.com/gitpython-developers/smmap
   summary: A pure git implementation of a sliding window memory map manager.
   doc_url: https://pythonhosted.org/smmap/
   license: BSD-3-Clause
